@@ -53,6 +53,7 @@ steps:
       # additionalParameters: 'key1=value key2=value keyN=value' [optional]
       # skipAzModuleInstallation: true [optional]
       # cleanupResources: true [optional]
+      # deleteDeployment: true [optional]
 ```
 
 ### Inputs
@@ -66,6 +67,7 @@ steps:
 | `additionalParameters` | Data Factory custom parameters. Key-values must be splitted by space. | false |
 | `skipAzModuleInstallation` | Skip `Az` powershell module installation. | false | false |
 | `cleanupResources` | Whether or not to run the cleanup step to remove deleted factory elements. | false | true |
+| `deleteDeployment` | Whether or not to delete the deployment after completion. | false | true |
 
 ## Contributing
 

@@ -28,6 +28,10 @@ inputs:
     description: 'Whether or not to run the cleanup step to remove deleted factory elements'
     required: false
     default: 'true'
+  deleteDeployment:
+    description: 'Whether or not to delete the deployment after completion'
+    required: false
+    default: 'true'
 
 runs:
   using: 'composite'
@@ -61,5 +65,5 @@ runs:
           -DataFactoryName '${{ inputs.dataFactoryName }}' `
           -predeployment $false `
           -cleanupResources ('${{ inputs.cleanupResources }}' -eq 'true') `
-          -deleteDeployment $true
+          -deleteDeployment ('${{ inputs.deleteDeployment }}' -eq 'true')
       shell: pwsh
